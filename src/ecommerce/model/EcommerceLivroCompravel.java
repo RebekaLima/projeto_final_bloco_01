@@ -5,8 +5,8 @@ public class EcommerceLivroCompravel extends Ecommerce{
 	private float preco;
 	private int estoque;
 
-	public EcommerceLivroCompravel(String titulo, int id, String autor, int ano, int tipo) {
-		super(titulo, id, autor, ano, tipo);
+	public EcommerceLivroCompravel(String titulo, int id, int tipo, String autor) {
+		super(titulo, id, tipo, autor);
 		this.preco = preco;
 		this.estoque = estoque;
 
@@ -40,5 +40,11 @@ public class EcommerceLivroCompravel extends Ecommerce{
             return super.toString() + ", Preço: " + preco + ", Estoque: Indisponível no momento";
         }
     }
+
+	@Override
+	public void visualizar() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 			

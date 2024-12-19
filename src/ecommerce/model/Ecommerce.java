@@ -8,11 +8,10 @@ public abstract class Ecommerce {
 		private int ano;
 		private int tipo;
 		
-		public Ecommerce(String titulo, int id, String autor, int ano, int tipo) {
+		public Ecommerce(String titulo, int id, int tipo, String autor) {
 			this.titulo = titulo;
 			this.id = id;
 			this.autor = autor;
-			this.ano = ano;
 			this.tipo = tipo;
 		}
 
@@ -65,4 +64,6 @@ public abstract class Ecommerce {
 		        return "Tipo desconhecido.  :/";
 		    }
 		}
+
+		public abstract void visualizar();
 }

@@ -9,7 +9,6 @@ public interface EcommerceRepository {
 		public void atualizar (Ecommerce titulo);
 		public void deletar (int id);
 		
-		public void 
-		public void 
-		public void 
+		public void comprar (int id, float preco);
+		public void alugar (int id, float taxa);
 }

@@ -1,6 +1,8 @@
 package ecommerce;
 
 import java.util.Scanner;
+
+import ecommerce.controller.EcommerceController;
 import ecommerce.model.Ecommerce;
 import ecommerce.model.EcommerceLivroCompravel;
 import ecommerce.model.EcommerceLivroAlugavel;
@@ -10,9 +12,14 @@ public class Menu {
 
 	public static void main(String[] args) {
 		
+		EcommerceController titulo = new EcommerceController();
+		
 		Scanner leia = new Scanner(System.in);
 		
-		int opcao;
+		int opcao, id, ano, tipo, numero;
+		String autor, dias, estoque, nomeDoLivro;
+		float preco, taxa;
+		
 		
 		while (true) { //o while vai repetir o menu na tela
 
@@ -58,11 +65,42 @@ public class Menu {
 				break;
 			case 2:
 				System.out.println("Listar todos os livros.\n\n");
+				titulo.listagemCompleta();
+				keyPress();
 				
 				break;
 			case 3:
 				System.out.println("Cadastrar novo livro.\n\n");
 				
+				System.out.println("Digite o ID do livro: ");
+				id = leia.nextInt();
+				
+				System.out.println("Digite o título do livro: ");
+				leia.skip("\\R?");
+				nomeDoLivro = leia.nextLine();
+				
+				System.out.println("Digite o nome do autor: ");
+				autor = leia.nextLine();
+				
+				do {
+					System.out.println("Digite o tipo do livro (1-Para comprável ou 2-Para alugável): ");
+					tipo = leia.nextInt();
+				}while (tipo < 1 && tipo > 2);
+				
+				
+				switch(tipo) {
+				case 1 -> {
+					System.out.println("Digite o preço do livro (R$): ");
+					preco = leia.nextFloat();
+					titulo.cadastrar(new EcommerceLivroCompravel(nomeDoLivro, id, tipo, autor));
+				}
+				case 2 -> {
+					System.out.println("Digite a taxa de aluguél (R$): ");
+					preco = leia.nextFloat();
+					titulo.cadastrar(new EcommerceLivroAlugavel(nomeDoLivro, id, tipo, autor));
+				}
+			}
+				keyPress();
 				break;
 			case 4:
 				System.out.println("Atualizar dados.\n\n");
@@ -85,6 +123,16 @@ public class Menu {
 				break;
 			}
 		}
+	}
+
+	private static float leianextFloat() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private static void keyPress() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
