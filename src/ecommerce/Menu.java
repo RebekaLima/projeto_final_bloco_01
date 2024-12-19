@@ -22,11 +22,12 @@ public class Menu {
 			System.out.println("************************************************************");
 			System.out.println("                                                            ");
 			System.out.println("         1 - Listar os livros disponíveis.                  ");
-			System.out.println("         2 - Cadastrar novo livro.                          ");
-			System.out.println("         3 - Atualizar dados.                               ");
-			System.out.println("         4 - Apagar livros.                                 ");
-			System.out.println("         5 - Busca por autor.                               ");
-			System.out.println("         6 - Finalizar.                                     ");
+			System.out.println("         2 - Listar os livros por ID.                       ");
+			System.out.println("         3 - Cadastrar novo livro.                          ");
+			System.out.println("         4 - Atualizar dados.                               ");
+			System.out.println("         5 - Apagar livros.                                 ");
+			System.out.println("         6 - Busca por autor.                               ");
+			System.out.println("         7 - Finalizar.                                     ");
 			System.out.println("                                                            ");
 			System.out.println("************************************************************");
 			System.out.println(" 'Quem lê um livro vive mil vidas; quem não lê vive só uma.'");
@@ -38,7 +39,7 @@ public class Menu {
 			
 			opcao = leia.nextInt(); // recebe o npumero da opção do menu que será executado
 			
-			if (opcao == 6) { //para aparecer a mensagem de finalização
+			if (opcao == 7) { //para aparecer a mensagem de finalização
 				System.out.println("\n'Os livros são pequenaos pedaçoes do incomensurável");
 				System.out.println("                - Stephan Zweig                      ");
 				leia.close();
@@ -48,25 +49,28 @@ public class Menu {
 			switch(opcao) {
 			
 			case 1:
-				System.out.println("Listar os livros disponíveis\n\n");
+				System.out.println("Listar os livros disponíveis.\n\n");
 				
 				break;
 			case 2:
-				System.out.println("Cadastrar novo livro.\n\n");
+				System.out.println("Listar os livros por ID.\n\n");
 				
 				break;
 			case 3:
-				System.out.println("Atualizar dados\n\n");
+				System.out.println("Cadastrar novo livro.\n\n");
 				
 				break;
 			case 4:
-				System.out.println("Apagar livros\n\n");
+				System.out.println("Atualizar dados.\n\n");
 				
 				break;
 			case 5:
-				System.out.println("Buscar por autor\n\n");
+				System.out.println("Apagar livros.\n\n");
 				
 				break;
+			case 6:
+				System.out.println("Busca por autor.\n\n");
+				
 			default:
 				System.out.println("\nOpção Inválida. :/ ");
 				break;
