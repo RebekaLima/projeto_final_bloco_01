@@ -1,4 +1,4 @@
-package loja.util;
+package ecommerce.util;
 
 public class Cores {
 
