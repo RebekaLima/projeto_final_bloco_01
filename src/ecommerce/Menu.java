@@ -2,7 +2,7 @@ package ecommerce;
 
 import java.util.Scanner;
 
-import loja.util.Cores;
+import ecommerce.util.Cores;
 
 public class Menu {
 
